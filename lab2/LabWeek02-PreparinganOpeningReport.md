@@ -109,11 +109,9 @@ https://github.com/EstherBear/SoftwareEngineering
 
 ### **6.1** **采用的平台**
 
-平台：Windows 应用市场，云服务器4核 8GB一台
+平台：PC 4台，服务器 1台
 
 ### **6.2** **采用的工具**
-
-- 硬件设备：PC 4台，服务器 1台
 
 - 软件工具：VSCode, 飞书, draw.io, SSH
 
