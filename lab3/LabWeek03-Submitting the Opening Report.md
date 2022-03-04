@@ -47,7 +47,7 @@ https://github.com/EstherBear/SoftwareEngineering
 1. **社区：**网站提供了博客社区功能，用户之间可以进行知识分享、程序开源、付费解答
 2. **扩展：**网站提供了自定义游戏上传功能，用户能够提交自己的编写的游戏来丰富网站的内容，以此来帮助拓展网站的教学和知识分享功能，也为相关的游戏开发展带来一定的收益
 
-![img](https://cdn.jsdelivr.net/gh/EstherBear/PictureBed@master/img/-16463871830562.assets)
+![image-20220304175633656](https://cdn.jsdelivr.net/gh/EstherBear/PictureBed@master/img/image-20220304175633656.png)
 
 ### **4.2 项目产物的性能**
 
