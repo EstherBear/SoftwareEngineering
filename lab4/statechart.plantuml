@@ -1,0 +1,24 @@
+@startuml statechart
+state "Reading Card" as RC
+state "Logging" as L
+state "Showing Menu" as SM
+state "Executing Tansaction" as ET
+state "Ejecting Card" as EC
+[*] --> RC
+RC --> L: Successfully
+L --> SM: Successfully
+SM --> ET: Chosen Transaction
+ET --> EC: Exit
+EC --> [*]
+RC --> EC: Exit Immediately or Reading Failed
+L --> EC: Exit Immediately
+SM --> EC: Exit Immediately
+L --> L: Wrong Account or Password
+ET -> SM: Continue
+SM: Password Change
+SM: Query Balance
+SM: Deposit
+SM: Withdrawals
+SM: Transfer
+SM: Slip Print
+@enduml

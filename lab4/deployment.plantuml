@@ -1,0 +1,19 @@
+@startuml deployment
+node ATM
+node "Card Reader" as CR
+node "Keyboard" as K
+node "Logging Device" as LD
+node "Cash Export" as CE
+node "Display" as D
+node "Receipt Printer" as RP
+node "Bank Server" as BS{
+    database "Bank Database"
+}
+ATM -- BS : "http over intranet"
+ATM -- CR : "physically"
+ATM -- K : "physically"
+ATM -- LD : "physically"
+ATM -- CE : "physically"
+ATM -- D : "physically"
+ATM -- RP : "physically"
+@enduml
