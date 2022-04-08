@@ -1,0 +1,27 @@
+' 在课程教师将教学资料以私有方式提交时，将从平台余额扣款，若余额不足则将调用支付宝的支付接口，支付成功后方可提交私有资料；另外，课程教师可以将资料的状态改为公开或私有。更改为私有则需要设定时长按月收费；更改为公开则退还剩余平台余额。平台周期性地触发时效检查，对私有时限过期的课程资源予以公开。
+@startuml
+left to right direction
+actor teacher as te
+package Frontend {
+    usecase "Interface" as inter
+    usecase "Tutorial Component" as tc
+}
+package Backend {
+  usecase "User Database" as ud
+  usecase "File Database" as fd
+  usecase "Server Node" as sn
+}
+usecase "Alipay" as ap
+te --> inter: "Update Tutorial"
+inter --> tc: "Update Tutorial"
+tc --> sn: "Updating Tutorial Request"
+sn --> ud: "Query Balance for Teacher"
+ud --> sn: "Balance Result"
+sn --> ap: "Payment Service Request"
+ap --> inter: "Payment Request"
+inter --> te: "Display Payment Method"
+te --> inter: "Pay"
+inter --> ap: "Payment Amount"
+ap --> sn: "Payment Result"
+sn --> fd: "Update Tutorial"
+@enduml

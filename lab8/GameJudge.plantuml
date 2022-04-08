@@ -1,0 +1,24 @@
+' 使用特定的数据库维护用户提交的历史代码。当用户修改代码提交评测后，系统将请求派发给评测服务器上的评测节点，判题程序对代码进行编译，并在执行器沙盒中执行，将输出结果反馈提交给前端，由前端反馈执行结果给用户查看，最后对递交的数据所属的数据库进行维护和更新。
+@startuml
+' left to right direction
+actor student as st
+package Frontend {
+    usecase "Interface" as inter
+    usecase "Code Component" as hc
+}
+package Backend {
+  usecase "Server Node" as sn
+  usecase "Judge Node" as jn
+  usecase "Sandbox" as sb
+}
+st --> inter: "Submit Code"
+inter --> hc: "Transfer Code"
+hc --> sn: "File Transferring(SSH/HTTP)"
+sn --> jn: "Source Code"
+jn --> sb: "Compiled Code"
+sb --> jn: "Executed Result"
+jn --> sn: "Executed Result"
+sn --> hc: "Executed Result"
+hc --> inter: "Executed Result"
+inter --> st: "Display Result"
+@enduml

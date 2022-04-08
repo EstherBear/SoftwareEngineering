@@ -1,0 +1,24 @@
+' 课程教师向服务器发出指定课程加入指定学习者的请求，服务器在数据库中将学习者与该课程关联起来，之后学习者发出拉取已参与课程请求，服务器将检索数据库并将相应课程发往浏览器。
+@startuml
+' left to right direction
+actor teacher as te
+package Frontend {
+    usecase "Interface" as inter
+    usecase "Course Component" as cc
+}
+package Backend {
+  usecase "User Database" as ud
+  usecase "File Database" as fd
+  usecase "Server Node" as sn
+}
+te --> inter: "Update Course"
+inter --> cc: "Update Course"
+cc --> sn: "Updating Course Request"
+sn --> ud: "Update Course and Student Information"
+sn --> fd: "Update Course"
+fd --> sn: "Update Result"
+ud --> sn: "Update Result"
+sn --> cc: "Update Result"
+cc --> inter: "Update Result"
+inter --> te: "Display Result"
+@enduml

@@ -1,0 +1,46 @@
+' 在比赛前提，通过前端开放特定接口，用户即可填写数据提交请求，进而派发给后端数据库进行数据检查和保存；在比赛期间，为具有报名数据的用户修改权限，在前端开放比赛通道接口，比赛途中用户的请求也通过特定的评测节点进行相应，通过由特定的服务器维护实时的Rank榜单功能，最后由特定程序计算比赛结果反馈给前端。
+@startuml
+' left to right direction
+actor student1 as st1
+actor student2 as st2
+package Frontend {
+    usecase "Interface1" as inter1
+    usecase "Interface2" as inter2
+    usecase "Code Component1" as cc1
+    usecase "Code Component2" as cc2
+}
+package Backend {
+  usecase "Server Node1" as sn1
+  usecase "Server Node2" as sn2
+  usecase "Judge Node1" as jn1
+  usecase "Judge Node2" as jn2
+  usecase "Sandbox1" as sb1
+  usecase "Sandbox2" as sb2
+  usecase "Ranking List" as rl
+}
+st1 --> inter1: "Submit Code"
+st2 --> inter2: "Submit Code"
+
+inter1 --> cc1: "Transfer Code"
+inter2 --> cc2: "Transfer Code"
+cc1 --> sn1: "File Transferring(SSH/HTTP)"
+cc2 --> sn2: "File Transferring(SSH/HTTP)"
+sn1 --> jn1: "Source Code"
+sn2 --> jn2: "Source Code"
+jn1 --> sb1: "Compiled Code"
+jn2 --> sb2: "Compiled Code"
+sb1 --> jn1: "Executed Result"
+sb2 --> jn2: "Executed Result"
+jn1 --> rl: "Update Ranking List"
+jn2 --> rl: "Update Ranking List"
+rl --> jn1: "Ranking Result"
+rl --> jn2: "Ranking Result"
+jn1 --> sn1: "Ranking Result"
+jn2 --> sn2: "Ranking Result"
+sn1 --> cc1: "Ranking Result"
+sn2 --> cc2: "Ranking Result"
+cc1 --> inter1: "Ranking Result"
+cc2 --> inter2: "Ranking Result"
+inter1 --> st1: "Display Result"
+inter2 --> st2: "Display Result"
+@enduml

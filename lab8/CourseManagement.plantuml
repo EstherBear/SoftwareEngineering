@@ -1,0 +1,20 @@
+@startuml
+' left to right direction
+actor student as st
+package Frontend {
+    usecase "Interface" as inter
+    usecase "Course Component" as cc
+}
+package Backend {
+  usecase "User Database" as ud
+  usecase "Server Node" as sn
+}
+st --> inter: "Join Course"
+inter --> cc: "Join Course"
+cc --> sn: "Joining Course Request"
+sn --> ud: "Add User to Course"
+ud --> sn: "Course HTML"
+sn --> cc: "Course HTML Response"
+cc --> inter: "HTML"
+inter --> st: "Render HTML"
+@enduml

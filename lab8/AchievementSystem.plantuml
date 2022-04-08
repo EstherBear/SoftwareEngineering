@@ -1,0 +1,23 @@
+' 通过建立单独的数据库，来维护用户在不同评测游戏上的Rank，以及成就收集数据。通过对用户提交代码后评测成绩的额外分支判断，来判断是否达到某成就的达成机制，如果达成，对相应的数据库进行更新和修改，同时反馈给前端成就页面。
+@startuml
+' left to right direction
+actor student as st
+package Frontend {
+    usecase "Interface" as inter
+    usecase "Achievement Component" as cc
+}
+package Backend {
+  usecase "User Database" as ud
+  usecase "Server Node" as sn
+  usecase "Judge Node" as jn
+}
+st --> inter: "Achievement"
+inter --> cc: "Query Achievement"
+cc --> sn: "Query Achievement Request"
+sn --> ud: "Query Achievement"
+ud --> sn: "Achievement Result"
+sn --> cc: "Achievement Result"
+cc --> inter: "Achievement Result"
+inter --> st: "Display Achievement"
+jn --> ud: "Update Achievement"
+@enduml

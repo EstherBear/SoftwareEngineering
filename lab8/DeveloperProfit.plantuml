@@ -1,0 +1,20 @@
+' 开发者在提交题目时可以通过HTTP协议发送填写的表单，服务器将会对该表单进行处理并加入题目的属性中。在向学习者显示题目时，服务器会查询相关属性以决定收费金额。
+@startuml
+' left to right direction
+actor developer as de
+package Frontend {
+    usecase "Interface" as inter
+    usecase "Problem Component" as pc
+}
+package Backend {
+  usecase "File Database" as fd
+  usecase "Server Node" as sn
+}
+de --> inter: "Submit Form"
+inter --> pc: "Transfer Form"
+pc --> sn: "Form Transferring"
+sn --> fd: "Add Form to Problem"
+sn --> pc: "Adding Result"
+pc --> inter: "Adding Result"
+inter --> de: "Display Result"
+@enduml
