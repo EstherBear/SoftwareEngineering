@@ -1,0 +1,106 @@
+' 通过维护特定的文件服务器来保存交流社区的所有博客数据，用户发出发表博客的请求后，系统根据其请求传递给后端服务器，对相应的博客进行数据保存。用户搜索、浏览和评论博客都通过前端的对外接口进行请求，通过Https协议反馈对应的对象，对博客的评论通过对文件服务器博客数据的修改来实现。
+' @startuml
+' ' left to right direction
+' actor student as st
+' package Frontend {
+'     usecase "Interface" as inter
+'     usecase "Blog Component" as bc
+' }
+' package Backend {
+'   usecase "User Database" as ud
+'   usecase "File Database" as fd
+'   usecase "Server Node" as sn
+' }
+' st --> inter: "Publish/Search/View/Comment Blog"
+' inter --> bc: "Blog Operation"
+' bc --> sn: "Blog Operation Request"
+' sn --> ud: "Update User Information"
+' sn --> fd: "Update/Query Blog File"
+' fd --> sn: "Operation Result"
+' sn --> bc: "Operation Result"
+' bc --> inter: "Operation Result"
+' inter --> st: "Display Result"
+' @enduml
+
+@startuml
+' skinparam backgroundColor #EEEBDC
+' skinparam handwritten true
+
+
+' skinparam box {
+'   backgroundColor #LightBlue
+' }
+
+' skinparam sequence {
+' ArrowColor DeepSkyBlue
+' ActorBorderColor DeepSkyBlue
+' LifeLineBorderColor blue
+' LifeLineBackgroundColor #A9DCDF
+
+' ParticipantBorderColor DeepSkyBlue
+' ParticipantBackgroundColor DodgerBlue
+' ParticipantFontName Impact
+' ParticipantFontSize 17
+' ParticipantFontColor #A9DCDF
+
+' ActorBackgroundColor aqua
+' ActorFontColor DeepSkyBlue
+' ActorFontSize 17
+' ActorFontName Aapex
+' }
+
+actor Student
+box "Frontend" #LightBlue
+participant "Interface" as A
+participant "Blog Component" as B
+end box
+box "Backend" #LightBlue
+participant "Server Node" as C
+participant "File Database" as E
+participant "User Database" as D
+end box
+
+
+' st --> inter: "Publish/Search/View/Comment Blog"
+' inter --> bc: "Blog Operation"
+' bc --> sn: "Blog Operation Request"
+' sn --> ud: "Update User Information"
+' sn --> fd: "Update/Query Blog File"
+' fd --> sn: "Operation Result"
+' sn --> bc: "Operation Result"
+' bc --> inter: "Operation Result"
+' inter --> st: "Display Result"
+Student -> A: Publish/Search/View/Comment Blog
+activate A
+
+A -> B: Blog Operation
+activate B
+
+B -> C: Blog Operation Request
+activate C
+
+C -> E: Update/Query Blog File
+activate E
+
+E -> C: Operation Result
+deactivate E
+
+C -> D: Update User Information
+activate D
+
+D -> C: Update Result
+deactivate D
+
+C -> B: Operation Result
+destroy C
+
+B -> A: Operation Result
+deactivate B
+
+A -> Student: Display Result
+
+legend center
+Sequence Diagram for Knowledge Blog
+endlegend
+@enduml
+

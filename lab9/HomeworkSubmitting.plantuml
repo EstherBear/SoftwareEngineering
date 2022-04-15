@@ -1,0 +1,46 @@
+' 用户发出提交作业的请求后，系统建立ssh / http连接，接收来自用户的文件传输，根据相关用户信息将传输的文件在后端文件服务器进行存储，同时更新课程教师的文件访问权限和提示信息，并在前端响应用户，提示其成功提交或因网络问题传输失败等等。
+@startuml
+actor Student
+box "Frontend" #LightBlue
+participant "Interface" as A
+participant "Homework Component" as B
+end box
+box "Backend" #LightBlue
+participant "Server Node" as C
+participant "File Database" as E
+participant "User Database" as D
+
+end box
+
+Student -> A: Submit Homework
+activate A
+
+A -> B: Transfer Homework
+activate B
+
+B -> C: File Transferring(SSH/HTTP)
+activate C
+
+C -> E: Store File
+activate E
+E -> C: Store Result
+deactivate E
+
+C -> D: Update File Permission
+activate D
+D -> C: Update Result
+deactivate D
+
+C -> B: Transferring Result
+destroy C
+
+B -> A: Transferring Result
+deactivate B
+
+A -> Student: Display Result
+deactivate A
+
+legend center
+Sequence Diagram for Homework Submission
+endlegend
+@enduml

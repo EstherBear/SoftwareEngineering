@@ -1,0 +1,38 @@
+' !include https://raw.githubusercontent.com/bschwarz/puml-themes/master/themes/cerulean/puml-theme-cerulean.puml
+	
+@startuml
+' !theme plain
+start
+:Acceptance Organization;
+note left
+  Development completed,
+  the development team
+  should set up the
+  acceptance organization.
+end note
+:Acceptance Plan;
+note right
+  The acceptance organization
+  is responsible for formulating
+  the acceptance plan of the 
+  software system.
+end note
+:Acceptance Review;
+note left
+  The acceptance organization 
+  conducts acceptance tests and 
+  reviews of software systems.
+end note
+:Acceptance Report;
+note right
+  The acceptance organization 
+  shall write a software system 
+  acceptance report.
+end note
+stop
+
+legend center
+Flow Diagram for Acceptance Procedure
+endlegend
+
+@enduml

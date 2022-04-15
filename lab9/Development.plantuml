@@ -1,0 +1,104 @@
+' ' 自由开发者在开发页面根据指引在本地安装开发工具包(SDK)，该工具包将使用主流的编程框架作为技术支撑，实现在本地模拟线上环境测试的功能。在根据开发文档完成开发和测试后在开发页面提交打包好的题目，系统将其加入审核队列，题目审核员对题目按先后顺序审核，审核通过后将题目加入数据库上线。
+' @startuml
+' ' left to right direction
+' actor developer as de
+' actor reviewer as re
+' package Frontend {
+'     usecase "Interface" as inter
+'     usecase "Problem Component" as pc
+' }
+' package Backend {
+'   usecase "File Database" as fd
+'   usecase "Server Node" as sn
+'   usecase "Review Queue" as rq
+' }
+' de --> inter: "Submit Problem"
+' inter --> pc: "Transfer Problem"
+' pc --> sn: "File Transferring(SSH/HTTP)"
+' sn --> rq: "Problem to be Reviewd"
+' rq --> re: "Problem to be Reviewd"
+' re --> rq: "Reviewd Result"
+' rq --> sn: "Reviewd Result"
+' sn --> fd: "Store Problem"
+' sn --> pc: "Reviewd Result"
+' pc --> inter: "Reviewd Result"
+' inter --> de: "Display Result"
+' @enduml
+
+@startuml
+' skinparam backgroundColor #EEEBDC
+' skinparam handwritten true
+
+
+' skinparam box {
+'   backgroundColor #LightBlue
+' }
+
+' skinparam sequence {
+' ArrowColor DeepSkyBlue
+' ActorBorderColor DeepSkyBlue
+' LifeLineBorderColor blue
+' LifeLineBackgroundColor #A9DCDF
+
+' ParticipantBorderColor DeepSkyBlue
+' ParticipantBackgroundColor DodgerBlue
+' ParticipantFontName Impact
+' ParticipantFontSize 17
+' ParticipantFontColor #A9DCDF
+
+' ActorBackgroundColor aqua
+' ActorFontColor DeepSkyBlue
+' ActorFontSize 17
+' ActorFontName Aapex
+' }
+
+actor Developer
+
+box "Frontend" #LightBlue
+participant "Interface" as A
+participant "Problem Component" as B
+end box
+box "Backend" #LightBlue
+participant "Server Node" as C
+participant "Review Queue" as D
+participant "File Database" as E
+end box
+' participant "Last Class" as C
+actor Reviewer
+Developer -> A: Submit Problem
+activate A
+
+A -> B: Transfer Problem
+activate B
+
+B -> C: File Transferring(SSH/HTTP)
+activate C
+
+C -> D: Problem to be Reviewed
+activate D
+
+D -> Reviewer: Problem to be Reviewed
+Reviewer -> D: Reviewed Result
+
+D -> C: Reviewed Result
+deactivate D
+
+C -> E: Store Problem
+activate E
+
+E -> C: Store Result
+deactivate E
+
+C -> B: Reviewed Result
+destroy C
+
+B -> A: Reviewed Result
+deactivate B
+
+A -> Developer: Display Result
+deactivate A
+
+legend center
+Sequence Diagram for Development
+endlegend
+@enduml

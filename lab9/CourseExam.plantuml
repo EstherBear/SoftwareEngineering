@@ -1,0 +1,97 @@
+@startuml
+' skinparam backgroundColor #EEEBDC
+' skinparam handwritten true
+
+
+' skinparam box {
+'   backgroundColor #LightBlue
+' }
+
+' skinparam sequence {
+' ArrowColor DeepSkyBlue
+' ActorBorderColor DeepSkyBlue
+' LifeLineBorderColor blue
+' LifeLineBackgroundColor #A9DCDF
+
+' ParticipantBorderColor DeepSkyBlue
+' ParticipantBackgroundColor DodgerBlue
+' ParticipantFontName Impact
+' ParticipantFontSize 17
+' ParticipantFontColor #A9DCDF
+
+' ActorBackgroundColor aqua
+' ActorFontColor DeepSkyBlue
+' ActorFontSize 17
+' ActorFontName Aapex
+' }
+
+actor Student
+box "Frontend" #LightBlue
+participant "Interface" as A
+participant "Exam Component" as B
+end box
+box "Backend" #LightBlue
+participant "Server Node" as C
+participant "User Database" as D
+participant "Correcting Node" as E
+end box
+' participant "Last Class" as C
+
+Student -> A: Begin Exam
+activate A
+
+A -> B: Join Exam
+activate B
+
+B -> C: Joining Exam Request
+activate C
+
+C -> D: Query User Permission
+activate D
+
+' D -> E: Query User Permission
+' activate E
+
+' E -> D: Query Result
+' deactivate E
+
+D -> C: Query Result
+deactivate D
+
+C -> B: Joining Response
+' destroy C
+
+B -> A: Joining Response
+' deactivate B
+
+A -> Student: Display Exam Paper
+' deactivate A
+
+Student -> A: Write Answer
+' activate A
+
+A -> B: Transfer Exam Answer
+' activate B
+
+B -> C: File Transferring(SSH/HTTP)
+' activate C
+
+C -> E: Exam Paper with Answers
+activate E
+
+E -> C: Exam Result
+destroy E
+
+C -> B: Exam Result
+destroy C
+
+B -> A: Exam Result
+deactivate B
+
+A -> Student: Display Exam Result
+
+legend center
+Sequence Diagram for Course Exam
+endlegend
+@enduml
+

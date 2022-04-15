@@ -1,0 +1,114 @@
+' ' 在课程教师将教学资料以私有方式提交时，将从平台余额扣款，若余额不足则将调用支付宝的支付接口，支付成功后方可提交私有资料；另外，课程教师可以将资料的状态改为公开或私有。更改为私有则需要设定时长按月收费；更改为公开则退还剩余平台余额。平台周期性地触发时效检查，对私有时限过期的课程资源予以公开。
+' @startuml
+' left to right direction
+' actor teacher as te
+' package Frontend {
+'     usecase "Interface" as inter
+'     usecase "Tutorial Component" as tc
+' }
+' package Backend {
+'   usecase "User Database" as ud
+'   usecase "File Database" as fd
+'   usecase "Server Node" as sn
+' }
+' usecase "Alipay" as ap
+' te --> inter: "Update Tutorial"
+' inter --> tc: "Update Tutorial"
+' tc --> sn: "Updating Tutorial Request"
+' sn --> ud: "Query Balance for Teacher"
+' ud --> sn: "Balance Result"
+' sn --> ap: "Payment Service Request"
+' ap --> inter: "Payment Request"
+' inter --> te: "Display Payment Method"
+' te --> inter: "Pay"
+' inter --> ap: "Payment Amount"
+' ap --> sn: "Payment Result"
+' sn --> fd: "Update Tutorial"
+' @enduml
+
+@startuml
+' skinparam backgroundColor #EEEBDC
+' skinparam handwritten true
+
+
+' skinparam box {
+'   backgroundColor #LightBlue
+' }
+
+' skinparam sequence {
+' ArrowColor DeepSkyBlue
+' ActorBorderColor DeepSkyBlue
+' LifeLineBorderColor blue
+' LifeLineBackgroundColor #A9DCDF
+
+' ParticipantBorderColor DeepSkyBlue
+' ParticipantBackgroundColor DodgerBlue
+' ParticipantFontName Impact
+' ParticipantFontSize 17
+' ParticipantFontColor #A9DCDF
+
+' ActorBackgroundColor aqua
+' ActorFontColor DeepSkyBlue
+' ActorFontSize 17
+' ActorFontName Aapex
+' }
+
+actor Teacher
+box "Frontend" #LightBlue
+participant "Interface" as A
+participant "Tutorial Component" as B
+end box
+box "Backend" #LightBlue
+participant "Server Node" as C
+participant "User Database" as D
+participant "File Database" as E
+end box
+box "Third Party" #LightBlue
+participant "Alipay" as F
+end box
+
+Teacher -> A: Update Tutorial
+activate A
+
+A -> B: Update Tutorial
+activate B
+
+B -> C: Update Tutorial Request
+activate C
+
+C -> D: Query Balance for Teacher
+activate D
+
+D -> C: Balance Result
+deactivate D
+
+C -> F: Payment Service Request
+activate F
+
+F -> A: Payment Request
+A -> Teacher: Display Payment Method
+Teacher -> A: Pay
+A -> F: Payment Result
+
+F -> C: Payment Result
+deactivate F
+
+C -> E: Update Tutorial
+activate E
+
+E -> C: Update Result
+deactivate E
+
+C -> B: Update Result
+destroy C
+
+B -> A: Update Result
+deactivate B
+
+A -> Teacher: Display Result
+deactivate A
+
+legend center
+Sequence Diagram for Making Profits from Teacher
+endlegend
+@enduml

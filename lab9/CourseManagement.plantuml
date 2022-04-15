@@ -1,0 +1,66 @@
+@startuml
+' skinparam backgroundColor #EEEBDC
+' skinparam handwritten true
+
+
+' skinparam box {
+'   backgroundColor #LightBlue
+' }
+
+' skinparam sequence {
+' ArrowColor DeepSkyBlue
+' ActorBorderColor DeepSkyBlue
+' LifeLineBorderColor blue
+' LifeLineBackgroundColor #A9DCDF
+
+' ParticipantBorderColor DeepSkyBlue
+' ParticipantBackgroundColor DodgerBlue
+' ParticipantFontName Impact
+' ParticipantFontSize 17
+' ParticipantFontColor #A9DCDF
+
+' ActorBackgroundColor aqua
+' ActorFontColor DeepSkyBlue
+' ActorFontSize 17
+' ActorFontName Aapex
+' }
+
+actor Student
+box "Frontend" #LightBlue
+participant "Interface" as A
+participant "Course Component" as B
+end box
+box "Backend" #LightBlue
+participant "Server Node" as C
+participant "User Database" as D
+end box
+' participant "Last Class" as C
+
+Student -> A: Join Course
+activate A
+
+A -> B: Join Course
+activate B
+
+B -> C: Joining Course Request
+activate C
+
+C -> D: Add User to Course
+activate D
+
+D -> C: Course HTML
+deactivate D
+
+C -> B: Course HTML Response
+destroy C
+
+B -> A: HTML
+deactivate B
+
+A -> Student: Render HTML
+deactivate A
+
+legend center
+Sequence Diagram for Course Management
+endlegend
+@enduml

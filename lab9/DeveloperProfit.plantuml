@@ -1,0 +1,87 @@
+' 开发者在提交题目时可以通过HTTP协议发送填写的表单，服务器将会对该表单进行处理并加入题目的属性中。在向学习者显示题目时，服务器会查询相关属性以决定收费金额。
+' @startuml
+' ' left to right direction
+' actor developer as de
+' package Frontend {
+'     usecase "Interface" as inter
+'     usecase "Problem Component" as pc
+' }
+' package Backend {
+'   usecase "File Database" as fd
+'   usecase "Server Node" as sn
+' }
+' de --> inter: "Submit Form"
+' inter --> pc: "Transfer Form"
+' pc --> sn: "Form Transferring"
+' sn --> fd: "Add Form to Problem"
+' sn --> pc: "Adding Result"
+' pc --> inter: "Adding Result"
+' inter --> de: "Display Result"
+' @enduml
+
+@startuml
+' skinparam backgroundColor #EEEBDC
+' skinparam handwritten true
+
+
+' skinparam box {
+'   backgroundColor #LightBlue
+' }
+
+' skinparam sequence {
+' ArrowColor DeepSkyBlue
+' ActorBorderColor DeepSkyBlue
+' LifeLineBorderColor blue
+' LifeLineBackgroundColor #A9DCDF
+
+' ParticipantBorderColor DeepSkyBlue
+' ParticipantBackgroundColor DodgerBlue
+' ParticipantFontName Impact
+' ParticipantFontSize 17
+' ParticipantFontColor #A9DCDF
+
+' ActorBackgroundColor aqua
+' ActorFontColor DeepSkyBlue
+' ActorFontSize 17
+' ActorFontName Aapex
+' }
+
+actor Developer
+
+box "Frontend" #LightBlue
+participant "Interface" as A
+participant "Problem Component" as B
+end box
+box "Backend" #LightBlue
+participant "Server Node" as C
+participant "File Database" as D
+end box
+
+Developer -> A: Submit Form
+activate A
+
+A -> B: Transfer Form
+activate B
+
+B -> C: Form Transferring
+activate C
+
+C -> D: Add Form to Corresponding Problem
+activate D
+
+D -> C: Adding Result
+deactivate D
+
+C -> B: Adding Result
+destroy C
+
+B -> A: Adding Result
+deactivate B
+
+A -> Developer: Display Result
+deactivate A
+
+legend center
+Sequence Diagram for Making Profits for Developer
+endlegend
+@enduml

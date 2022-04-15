@@ -1,0 +1,98 @@
+' 课程教师向服务器发出指定课程加入指定学习者的请求，服务器在数据库中将学习者与该课程关联起来，之后学习者发出拉取已参与课程请求，服务器将检索数据库并将相应课程发往浏览器。
+' @startuml
+' ' left to right direction
+' actor teacher as te
+' package Frontend {
+'     usecase "Interface" as inter
+'     usecase "Course Component" as cc
+' }
+' package Backend {
+'   usecase "User Database" as ud
+'   usecase "File Database" as fd
+'   usecase "Server Node" as sn
+' }
+' te --> inter: "Update Course"
+' inter --> cc: "Update Course"
+' cc --> sn: "Updating Course Request"
+' sn --> ud: "Update Course and Student Information"
+' sn --> fd: "Update Course"
+' fd --> sn: "Update Result"
+' ud --> sn: "Update Result"
+' sn --> cc: "Update Result"
+' cc --> inter: "Update Result"
+' inter --> te: "Display Result"
+' @enduml
+
+@startuml
+' skinparam backgroundColor #EEEBDC
+' skinparam handwritten true
+
+
+' skinparam box {
+'   backgroundColor #LightBlue
+' }
+
+' skinparam sequence {
+' ArrowColor DeepSkyBlue
+' ActorBorderColor DeepSkyBlue
+' LifeLineBorderColor blue
+' LifeLineBackgroundColor #A9DCDF
+
+' ParticipantBorderColor DeepSkyBlue
+' ParticipantBackgroundColor DodgerBlue
+' ParticipantFontName Impact
+' ParticipantFontSize 17
+' ParticipantFontColor #A9DCDF
+
+' ActorBackgroundColor aqua
+' ActorFontColor DeepSkyBlue
+' ActorFontSize 17
+' ActorFontName Aapex
+' }
+
+actor Teacher
+box "Frontend" #LightBlue
+participant "Interface" as A
+participant "Course Component" as B
+end box
+box "Backend" #LightBlue
+participant "Server Node" as C
+participant "File Database" as D
+participant "User Database" as E
+end box
+' participant "Last Class" as C
+
+Teacher -> A: Update Course
+activate A
+
+A -> B: Update Course
+activate B
+
+B -> C: Update Course Request
+activate C
+
+C -> D: Update Course
+activate D
+
+D -> C: Update Result
+deactivate D
+
+C -> E: Update Course and Teacher Information
+activate E
+
+E -> C: Update Result
+deactivate E
+
+C -> B: Update Result
+destroy C
+
+B -> A: Update Result
+deactivate B
+
+A -> Teacher: Display Result
+deactivate A
+
+legend center
+Sequence Diagram for Teaching
+endlegend
+@enduml
