@@ -1,0 +1,29 @@
+
+@startuml
+title Flow Chart of Judge Module
+skinparam ConditionEndStyle hline
+start
+:Code File;
+:Message Queue;
+fork
+  :Judger;
+fork again
+  :Judger;
+fork again
+  :Judger;
+fork again
+  :Judger;
+end merge
+
+if (Compile Error?) then (Yes)
+:Compile Error;
+:Front End;
+else (no)
+if (Score and Action Sequence) then (Score)
+:Front End;
+else (Action Sequence)
+:Game Engine;
+endif
+endif
+stop
+@enduml

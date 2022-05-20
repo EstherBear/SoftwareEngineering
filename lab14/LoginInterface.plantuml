@@ -1,0 +1,10 @@
+	
+@startuml
+title Interface of Login Module
+top to bottom direction
+[Data Management Module] - () "Data Access"
+[Front End] --> () HTTP : use
+HTTP - [Login Module]
+[Login Module] --> () "Data Access" : use
+
+@enduml

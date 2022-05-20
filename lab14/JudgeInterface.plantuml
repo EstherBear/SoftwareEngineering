@@ -1,0 +1,10 @@
+	
+@startuml
+title Interface of Judge Module
+top to bottom direction
+[Data Management Module] - () "Data Access"
+[Front End] --> () HTTP : use
+HTTP - [Judge Module]
+[Judge Module] --> () "Data Access" : use
+[Judge Module] --> [Game Engine] : action sequence
+@enduml

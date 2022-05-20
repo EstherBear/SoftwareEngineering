@@ -1,0 +1,31 @@
+
+@startuml
+title Flow Chart of Login Module
+skinparam ConditionEndStyle hline
+start
+:isLogin, username, passward;
+if (isLogin?) then (Login)
+' repeat :Enter Username and Password;
+' backward :Login Failure;
+' repeat while (Username and Passward Correct?) is (No) not (Yes)
+    :userRecord=query(username, passward);
+    if (userRecord is NULL) then (yes)
+    :login(userRecord);
+    :return LoginSuccess;
+    else (no)
+    :return LoginFailure;
+    endif
+else (Register)
+' repeat :Enter Username and Password;
+' backward :Login Failure;
+' repeat while (Username and Passward Correct?) is (No) not (Yes)
+    :userRecord=query(username);
+    if (userRecord is not NULL or isSimple(passward)) then (yes)
+    :return LoginFailure;
+    else (no)
+    :register(username, passward);
+    :return LoginSuccess;
+    endif
+endif
+stop
+@enduml

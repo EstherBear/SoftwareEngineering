@@ -1,0 +1,14 @@
+
+@startuml
+title IPO of Judge Module
+skinparam ConditionEndStyle hline
+start
+:Code File;
+if (Compile Error?) then (Yes)
+:Compile Error;
+else (No)
+:Score and Action Sequence;
+endif
+stop
+
+@enduml

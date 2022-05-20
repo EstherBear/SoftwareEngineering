@@ -1,0 +1,25 @@
+	
+@startuml
+title Framework
+
+[Front End] <-> [Nginx]
+[Nginx] <--> Se
+Se <--> [Data Governance]
+[Data Governance] <--> db
+node "Server" as Se {
+    [Login Service]
+    [Judge Service]
+    [Course Service]
+    [Community Service]
+}
+
+
+
+
+
+database "database" as db {
+}
+
+
+
+@enduml

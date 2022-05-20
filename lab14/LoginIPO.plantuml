@@ -1,0 +1,18 @@
+
+@startuml
+title IPO of Login Module
+skinparam ConditionEndStyle hline
+start
+if (Register or Login?) then (Login)
+repeat :Enter Username and Password;
+backward :Login Failure;
+repeat while (Username and Passward Correct?) is (No) not (Yes)
+:Login Success;
+else (Register)
+repeat :Enter New Username and Password;
+backward :Register Failure;
+repeat while (Username Has Exists or Passward Too Simple?) is (Yes) not (no)
+:Register Success;
+endif
+stop
+@enduml
