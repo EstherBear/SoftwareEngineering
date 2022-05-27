@@ -1,0 +1,47 @@
+@startuml
+
+actor User
+box "Other Modules" #LightBlue
+participant "other modules" as modules
+end box
+
+box "Community module" #LightBlue
+participant "Process Schedule" as Scheduler
+participant "Process Pool" as Pool
+participant "Deadlock Detection" as DeadLock
+participant "Bussiness Logic" as logic
+participant "Communication" as Comm
+end box
+
+activate User
+activate Pool
+activate Scheduler
+activate DeadLock
+
+modules -> Scheduler : Request
+User -> Scheduler : Request
+modules -> Scheduler :Request
+
+Scheduler -> Pool: Add Request
+Pool -> DeadLock: Detect DeadLock
+DeadLock -> logic: Process Logic
+activate logic
+logic -> Comm: Communicate
+activate Comm
+Comm -> logic: message-from-others
+deactivate Comm
+logic -> modules: Result
+deactivate logic
+modules -> User: Result
+
+deactivate DeadLock
+deactivate Scheduler
+deactivate Pool
+deactivate User
+
+
+
+legend center
+Sequence Diagram for Community Module
+endlegend
+@enduml

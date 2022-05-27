@@ -1,0 +1,30 @@
+@startuml
+
+actor User
+
+box "Judge module" #LightBlue
+participant "Code Checker" as checker
+participant "Message Queue" as mq
+participant "Judge Node" as node
+end box
+
+activate User
+activate mq
+
+User -> checker : Source Code File
+activate checker
+checker -> mq : Source Code File
+deactivate checker
+mq -> node : Judge Request
+activate node
+node -> User : Judge Result
+deactivate node
+
+deactivate User
+
+
+
+legend center
+Sequence Diagram for Judge Module
+endlegend
+@enduml

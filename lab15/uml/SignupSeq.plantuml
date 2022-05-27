@@ -1,0 +1,40 @@
+@startuml
+
+actor User
+box "Frontend" #LightBlue
+participant "Interface" as I
+end box
+
+box "Backend" #LightBlue
+participant "Login Module" as Login
+participant "Data Management Module" as Data
+end box
+' participant "Last Class" as S
+
+User -> I: Username and Password
+activate I
+
+I -> Login: Sing Up Request
+activate Login
+
+Login -> Data: Request User Profile
+activate Data
+
+Data -> Login: User Profile / NULL
+deactivate Data
+
+Login -> Data: Add User
+activate Data
+
+Data -> Login: Success / Failed
+deactivate Data
+
+Login -> I: Success / Failed
+deactivate Login
+
+I -> User: Success / Retry Information
+
+legend center
+Sequence Diagram for Signing Up
+endlegend
+@enduml

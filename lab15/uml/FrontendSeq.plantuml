@@ -1,0 +1,34 @@
+' lab 15 3.2
+
+@startuml
+
+actor User1
+actor User2
+box "Frontend" #LightBlue
+participant "Concurrency Control" as CC
+participant "Request Pool" as RPool
+end box
+
+box "Backend" #LightBlue
+participant "Modules"
+end box
+
+User1 -> CC: Request1
+activate CC
+
+User2 -> CC: Request2
+CC -> RPool: Request2
+activate RPool
+
+User1 -> CC: Request3
+CC -> RPool: Request3
+
+CC -> Modules: Request1
+activate Modules
+RPool -> Modules: Request2
+RPool -> Modules: Request3
+
+legend center
+Sequence Diagram for Frontend, threshold=1
+endlegend
+@enduml
