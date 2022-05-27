@@ -1,0 +1,52 @@
+@startuml
+
+box "Other Modules" #LightBlue
+participant "Module1" as M1
+participant "Module2" as M2
+end box
+
+box "Data Management Module" #LightBlue
+participant "Security Check" as Security
+participant "Priority Queue 1" as PQ1
+participant "Priority Queue 2" as PQ2
+end box
+
+box "Data Base"
+participant "DB Interface" as DB
+end box
+
+activate PQ1
+activate PQ2
+
+activate M1
+M1 -> Security: Req 1
+activate Security
+Security -> M1: Failed
+deactivate M1
+
+activate M2
+M2 -> Security: Req 2
+Security -> PQ2: Req 2
+
+activate M1
+M1 -> Security: Req 3
+Security -> PQ1: Req 3
+
+
+PQ1 -> DB: Req 2
+activate DB
+DB -> M2: Res 2
+deactivate DB
+deactivate M2
+
+PQ2 -> DB: Req 3
+activate DB
+DB -> M1: Res 3
+deactivate DB
+deactivate M1
+
+
+legend center
+Sequence Diagram for Data Management Module
+endlegend
+@enduml

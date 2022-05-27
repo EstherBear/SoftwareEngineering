@@ -1,0 +1,45 @@
+@startuml
+
+actor User
+
+box "Frontend" #LightBlue
+participant "Interface" as I
+end box
+
+box "Course Module" #LightBlue
+participant "Process Schedule" as Scheduler
+participant "Process Pool" as Pool
+participant "Deadlock Detection" as DeadLock
+participant "Bussiness Logic" as logic
+participant "Communication" as Comm
+end box
+
+activate User
+activate I
+activate Pool
+activate Scheduler
+activate DeadLock
+
+User -> I: Request
+I -> Scheduler : Request
+Scheduler -> Pool: Add Request
+Pool -> DeadLock: Detect DeadLock
+DeadLock -> logic: Process Logic
+activate logic
+logic -> Comm: Communicate
+activate Comm
+deactivate Comm
+logic -> I: Result
+deactivate logic
+I -> User: Result
+
+deactivate DeadLock
+deactivate Scheduler
+deactivate Pool
+deactivate I
+deactivate User
+
+legend center
+Sequence Diagram for Course Module
+endlegend
+@enduml
