@@ -795,3 +795,13 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 跳转到通知页面后，将会详细的显示所有的个人通知。
 
 ![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725406.png)
+
+### 5.6 用于测试的账户
+
+1. 课程 ：
+
+   用户端：账号 18855556666，密码 qwer123456
+
+   后台：账号 meedu@meedu.meedu，密码 meedu123，网址 http://course.skywatch.top/admin/#/
+
+2. 社区： 账号dayday，密码dayday
