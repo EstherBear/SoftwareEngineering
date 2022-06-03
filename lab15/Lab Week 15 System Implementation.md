@@ -1,6 +1,8 @@
 # Lab Week 15: System Implementation
 
-https://github.com/EstherBear/SoftwareEngineering
+网站地址：http://oj.skywatch.top/
+
+项目GitHub地址：https://github.com/EstherBear/SoftwareEngineering
 
 # 0 人员介绍
 
@@ -28,7 +30,7 @@ https://github.com/EstherBear/SoftwareEngineering
 
 系统功能结构图如下所示：
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=YjhhYjAyYmFlZDRkNmQ4ZTg5ZWU0ZDEyNDAzZmNlYjFfamJHUHBJN1hrcnBiVWZkRE1nTnRaUnpES1Q3MjB1NDdfVG9rZW46Ym94Y25rV1dUWHpURk9YS0ZyVkpkV2J1MjJwXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 # 3 关键模块说明
 
@@ -54,19 +56,19 @@ https://github.com/EstherBear/SoftwareEngineering
 
 运行流程图如下：
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=NjcxMDdlOTA4NTM1ZjM2NzhmMDI1MTE2YjZkZDJiZmZfWUN5OU9uVnl6RlVJbHpoazdsUmhVVlVCbW8waWJsU01fVG9rZW46Ym94Y25MY2dQc0U2eHNnTmpHaXBMR2pQR3JnXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 ### 3.1.3 时序描述
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=OTc4NTQzYzc2YTUwNTA5OGI0NDJmNTE2YTgxMjMwZmJfMGpPem8wbG1hc3ppTFhiV3BqcDgyclFSTTY5cDI2MnVfVG9rZW46Ym94Y25UWjQwaDJPTng3TVgyZ0M0TXVkdEVnXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=OWZjMTFmZjQwZDNmYTRiZGE0YjYyMDBhN2JkODliYTVfYUlqVnh5STVhVWZXTlhYb0EyZTBVV2txc0hSaHdIaXpfVG9rZW46Ym94Y25laHdRSU1yUEZFTEw5OVppSGtEbmFmXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 ### 3.1.4 接口描述
 
 登录模块连接前端以及数据治理模块，它接收来自前端的请求，简单的逻辑处理后，向数据治理模块发出对应的查询请求，得到结果后再经过简单的逻辑处理，把结果信息返回给前端。
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=YmQ2N2VkZDg2YmQ1MmY5OWMyMzE5MDJhZDdkMDU2ZDdfaVJ2QjdDWWtKQVBFQjF6MU9VY3Q3blR5Sk1FY2VUN1JfVG9rZW46Ym94Y25Qdm5pWTZBWGN5MXBRWTNtNWRFbFFPXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 ### 3.1.5 附注
 
@@ -98,7 +100,7 @@ TODO
 
 ### 3.2.3 时序描述
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=MmY0Mzg1YmViOTg1NDQ0NTMxNTkwMDQxZWQyZTIxZmVfUjdTZFNobm5tTGRBc2hhSHNBczJLR3FOYnpGRlpmODhfVG9rZW46Ym94Y25Zclk3MEUyZEdkMUoyeFZKcnluTU43XzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 
 
@@ -106,7 +108,7 @@ TODO
 
 前端界面模块连接用户以及除数据治理模块的其他所有模块，它接收来自用户的请求，向除数据治理模块的其他模块发出对应的请求，并接收返回结果再展示给用户。
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=MzRiM2QzNDM2ZjRiNzY2NTFmZDk1NmE2OTAzNGVkMWZfVFhFTGJDVFFIdWIwUXFaS2NKV2FPNjI0b3BUSTQxcVVfVG9rZW46Ym94Y25Ybmd0aXhuOWVVdmhHc1NMQ2hzQ0xjXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 ### 3.2.5 附注
 
@@ -138,11 +140,11 @@ TODO
 
 运行流程图如下：
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=MDE2YzQ5ZTZmNTlhMzY0ZmQwZjlmM2VlZjZlZjNkYzFfOGdEU0xnOFZRclp3MTlUZ2VkOWtncWlPVnZDQWdLdFJfVG9rZW46Ym94Y254VlltM2gxYVVYdXJUSURlZ3BlaFVkXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 ### 3.3.3 时序描述
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=ODE0Y2I1ZDU1MmEyNTllMmZjN2QwNWYxYjUzMzhlOTVfTG1FN2Y0WDlNcFJhUkFkQ20xTUhiT0FSbEZ6TTZ2TUlfVG9rZW46Ym94Y24zZkxDNU1TbzI0ZFN5b2Z4OGVjSDZlXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 
 
@@ -150,7 +152,7 @@ TODO
 
 课程模块与前端模块、数据治理模块进行通信交互，相互查询和交换数据信息。此外，课程模块具备死锁检查子程序，进程调度子程序，进程池维护子程序，交互通信子程序，业务逻辑子程序等等，它们彼此的相互合作，完成了接收来自用户的操作请求，返回给用户相应的状态信息。
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=YmViY2EwNWE4ZDhkZjY3YjE4NTIzYWI1NjY5Y2RmNDVfOG5tVWhMejhUY0Z6dlppRGFkU21QUnc0aEVQZ3htSFFfVG9rZW46Ym94Y25iVWQzVDRyYlkwblh1b3d6MHBmVmFoXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 ### 3.3.5 附注
 
@@ -174,11 +176,11 @@ TODO
 
 运行流程图如下：
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDZmOThkYmI2ZTgxMDYyNmFjNjQ3ZDc2MjhhMjRhZWJfOXZmTUVtOHVwUWpOSHh3SjlZOWdYQ21xYWxKWThzbndfVG9rZW46Ym94Y243QUZvSWMzTGgyRHNmN040TnBubXJnXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 ### 3.4.3 时序描述
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=ZGJhOWIyZWYwYTgwNzdlNmUwNTllNjQ3MjY4MmFmOTNfRDI2Ymc1MmxzcDRtV055ZWFJTUZEVjBxV0VBaFhmSW9fVG9rZW46Ym94Y244c0ltNmo1Z051WFNSNk1uQUhBVWdmXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 
 
@@ -186,7 +188,7 @@ TODO
 
 评测模块接收来自前端的请求，简单的逻辑处理后，调用评测节点完成评测结果。根据评测结果，向数据治理模块发出对应的修改用户数据的请求。最后把评测分数返回给前端，并把游戏的动作序列发送给游戏引擎。
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=MmU4MTI4NjRmNjZhM2RjYzk2NjcxZWYzZGQxMzZkNWJfdGFzdkdHTFZiTnVUTzdEY2JCa3lVYmxGMkIxTzFUNEJfVG9rZW46Ym94Y25lMUd5SmVzMUdIN0JSYm00eGlremxoXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 ### 3.4.5 附注
 
@@ -220,13 +222,13 @@ TODO
 
 运行流程图如下：
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=MmRhZDg4NmU5YzM1OTY5MzYzNGVhNjdlYzYzMjQ5OTRfN3ZQSUtBbkV1RG12b01sdXQxNUtMNHhqSjNTNlI4M1hfVG9rZW46Ym94Y253c0hqVFJQRVRTQ2lRVDJhZlVHalhiXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 ### 3.5.3 时序描述
 
 
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2M3MGI0NDM0NWNhZDA4NWI5ODMxMTBjMjk2NGFhNDhfVlVBand4VWJLN0ViTjVQMEVZZXA3aG80OExiR0pCY2lfVG9rZW46Ym94Y25Uc09pYm5PTmRZMXlTc3h6SFB6U0tmXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 
 
@@ -234,7 +236,7 @@ TODO
 
 社区模块与登录模块、前端模块、数据治理模块进行通信交互，相互查询和交换数据信息。在社区模块内部，它具备死锁检查子程序，进程调度子程序，进程池维护子程序，交互通信子程序，业务逻辑子程序等等，它们彼此的相互合作，完成了接收来自用户的操作请求，返回给用户相应的状态信息。
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=N2FjYjUwOTViMWQyYWUyMzc5ZWMzN2JhZjE4N2U4NGRfNXp0UURST2dPaDlpSUY1VURBcU9Lc0k5dXR4ZG1BeXVfVG9rZW46Ym94Y25QcDh1bHlOdFhpME9aQTMxWHppTW0xXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 ### 3.5.5 附注
 
@@ -258,11 +260,11 @@ TODO
 
 运行流程图如下：
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=YTI5NzEzZGM1ZDg4ZTcxYTNmZDk0YjVlM2JhNmZhNjBfbmRhcnBLalExRTF1MkVhSEJ3MUNTTzdwb05tZVdRZGZfVG9rZW46Ym94Y25DWWxTNHVyNEdreXd2RGtSNzFKeURmXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 ### 3.6.3 时序描述
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=MmNlM2RjMzViMWRmNDE3MDFlZDU5N2FmYmMzODU2ODlfeUN0aFkybnBTcnF5TGptcTJjWjhCbkdWQ3U0RVlZcGhfVG9rZW46Ym94Y25ycjZJNG1mZEl4MDhaTG9GZ2loS3doXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 
 
@@ -270,7 +272,7 @@ TODO
 
 数据治理模块连接所有其他模块以及数据库服务器，它接收来自其他模块的请求，向数据库发出对应的请求，进而数据库将对应的数据返回给其他模块。
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=NTI3NjA3ODMxZmQzMjcwODNkYzVkODMzOTkxZjRlYmNfekNzazI0M2FJdU9udzlVWDVEaUdNVm44UVNVU09EUkpfVG9rZW46Ym94Y25aMHBzQ1d0U1lLQ3F4bFcxSElXVGliXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 ### 3.6.5 附注
 
@@ -278,7 +280,98 @@ TODO
 
 # 4 源代码说明
 
-todo
+## 4.1 登录模块
+
+### 4.1.1 不同登录方式
+
+网站支持使用重定向或二维码的方式，使用第三方账号进行登录，也支持使用微信小程序进行的登陆，不同的登录方式只需要以下面的格式调用对应的API，并在请求体中提供相应的JSON信息：
+
+```Plain%20Text
+/api/v2/login/[login Method]
+```
+
+### 4.1.2 登录状态保持
+
+用户登录时需要调用 `POST /api/tokens` 接口，该接口的响应中会包含 `token` 字段。保持用户登录状态有以下两种方式：
+
+1. 在 HTTP header 中添加 `token` 参数，参数的值即为调用 `/api/tokens` 接口时返回的 `token` 字段。
+2. 在 Cookie 中添加 `token` 参数，参数的值即为调用 `/api/tokens` 接口时返回的 `token` 字段。
+
+以上两种方式都能实现保持用户登录状态，若在 HTTP header 中和 Cookie 中都添加了 `token` 参数，则将以 HTTP header 中的为准。
+
+`token` 是具有有效期的，用户在有效期内调用任意接口时，将自动续期，确保用户不需要频繁进行登录；若用户长时间未调用接口，则 `token` 可能会过期，即调用接口时返回“用户未登录”时，需要重新进行登录
+
+## 4.2 前端模块
+
+我们使用React框架设计前端页面，通过在html里引入存放在互联网上的 React 框架Script，完成课程界面 HTML 的设计。
+
+## 4.3 课程模块
+
+课程模块采用MeDu的成熟解决方案，调用其 RestFul API 完成对应功能。
+
+## 4.4 评测模块
+
+### 4.4.1 技术栈
+
+评测模块的后端都是基于python代码实现，使用的技术栈如下：
+
+- 纯python代码实现判题逻辑；
+- 微框架flask作为后端；
+- gunicorn+gevent提供高并发服务器的功能；
+- docker作为容器打包部署。
+
+### 4.4.2 文件组织和模块介绍
+
+评测模块后端的源代码组织如下：
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+其中：
+
+- Projects下存放各个题目的文件夹，每个题目的文件夹中，包含：
+  - Infrastucture，题目的基础代码，包括题目及其判题核心，以及测试用例等。
+  - Submissions，用户提交代码临时存放处。
+  - Description.json和Introduction.html，题目的描述和简介。
+- app.py存放响应请求的视图函数。
+- Dockerfile，gunicorn.conf.py以及reqirements.txt则是部署所需的配置文件。
+
+
+
+## 4.5 社区模块
+
+社区模块使用 Rest API, 能让任何支持HTTP请求的设备与社区的服务端进行交互，有了Rest API，我们的项目可以做到：
+
+- 开发各种主题的前端页面
+- 开发Android、IOS、Windows等客户端应用
+- 在其它模块中获取社区模块服务端数据。
+
+### 4.5.2 调用方式
+
+Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/api/question`
+
+### 4.5.1 请求格式
+
+- POST，PUT，PATCH的请求格式为 `JSON`，首部包含 `Content-Type: application/json`
+- 包含文件上传的请求格式为 `from-data`，首部包含 `Content-Type: application/from-data`
+
+### 4.5.2 响应格式
+
+响应格式均为JSON，包含错误码（为0则成功，否则错误）、数据、和分页信息（当返回列表且需要分页时）
+
+```JSON
+{
+  "code": 0,
+  "data": [],
+  "pagination": {
+    "page": 1,
+    "per_page": 15,
+    "previous": null,
+    "next": 2,
+    "total": 124,
+    "pages": 9
+  }
+}
+```
 
 # 5 运行测试
 
@@ -288,29 +381,163 @@ todo
 
 对于新用户，系统会要求进行用户注册。按照前端指引输入用户邮箱，并根据邮箱收到的邮件验证码来进行注册。
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=ODdlMTg4M2Q4NzVjODJmODVmM2Q2MDE2YjI2NzI5YWFfSFZPQzQwbE51djg4d2VqTW53VGlxRUY2bURWeWd3ZGxfVG9rZW46Ym94Y25SRTBGZU9VOU1XbDNQSTVTbmgyY3ZlXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 ### 5.1.2 用户登录
 
 注册完毕后，用户可以通过输入账号密码来进行登录
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=Yzg2YTJjYmE2ZGVkNDdlMmQ4NTBiNGIzNmJhZWI5MmJfcXRsTnA2eXlrVmZCeHo5T2RQUTJ5TWxiSGJnWHZSTEdfVG9rZW46Ym94Y25sMlcwQUtYbTBIQ1FsbTlsWkY5dVJoXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 ### 5.1.3 重置密码
 
 考虑到用户可能会忘记所设置的密码。通过点击登录页面的左下角按钮，选择“忘记密码”选项，即可进入到重置密码页面，按照注册用的邮箱来重置密码
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=MDg0M2I4ZDRiYTlhN2ViNzIwODY2YWZhZmU2M2Y1NjNfM3NPV3p4RlNBSUdDVUlQU1lWMUNOVzNBaTBwSjQyRnRfVG9rZW46Ym94Y256REdGTUlZQzJ1cHQ0T3NnNld4czljXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
-## 5.2 评测功能
 
-todo
 
-## 5.3 课程功能
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
-从主系统页面选择AI课程功能后，系统会跳转到课程首页。
+## 5.2 主页面
 
-在课程的左侧功能栏中包含以下七个主要功能板块：
+在主页面，包括了对项目网站的介绍，在右上角包含了对我们三个核心功能的跳转链接：
+
+- 评测功能：Problem
+- 课程系统：Course
+- 社区功能：Community
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+## 5.3 评测功能
+
+### 5.3.1首页
+
+在评测首页，主页的上方的导航栏包含网站的名称、评测题目以及到我们网站其他部分(课程、社区)的链接。首页下部分包含网站logo和欢迎语句。
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+导航栏一直悬停，点击网站名称可以返回首页。
+
+### 5.3.2题目
+
+点击导航栏上的Problem按钮进入题目列表。目前我们只设置了一道题目。点击题目的ID或Title可以查看题目详情。
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+题目详情中，包含了一段题目描述，除此之外，上方表格中指示了需要编写的文件的数量。
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+点击sumbit按钮进入提交界面。
+
+### 5.3.3提交
+
+提交界面包含了该题目中提供的代码，其中名称带锁形符号的python文件是不可编辑的，用户只能够编写并提交名称不带锁形符号的python文件。
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+点击Submit按钮进行提交。
+
+### 5.3.4结果
+
+代码评测结果将展示在提交页面的下部分。
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+## 5.4 课程功能
+
+### 5.4.1 用户端
+
+从主页面通过用户端登入后，来到用户端课程首页。
+
+在用户端课程首页，我们可以看到主页的左上角是我们项目的logo，主页的右上角是用户中心、用户的消息等信息，主页的上面包含了对课程的模糊搜索功能。在主页的下面则包含了不同的课程。
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+#### 5.4.1.1 用户中心
+
+点击用户中心，系统跳转到用户端的用户中心首页，其包括了多个不同功能的子界面。包括：
+
+- 用户中心：显示用户的积分情况，充值情况，邀请新用户情况（邀请新用户可以获得代金券或一定的邀请余额）
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+- 我的资料：显示用户的详细信息，包括用户名、头像、姓名、身份证号等信息。
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+- 录播课程：显示该用户的课程购买情况和购买记录，以及课程观看和收藏记录。
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+- 我的订单、我的消息：反馈了用户的订单记录、消息记录。当没有订单记录和消息记录时，系统会显示为空。
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+- 我的邀请、积分明细：为了进一步增大对项目的推广，我们提出了邀请机制。用户可以凭借自己的邀请码来邀请新用户注册系统，来获得一定的邀请金额、代金券和积分，它们可以用来在购买课程时进行打折或抵消一部分价格。
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+#### 5.4.1.2 课程中心
+
+在主页的下面，课程按照不同的类别进行组织，用户可以选择点击不同的按钮来进行单独的显示：
+
+- 全部：显示所有的课程信息
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+- 单独类别：只显示属于某个单独类别的课程信息。例如在Artificial Intelligence类别下：
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+在选择了某一个类别进行显示后，我们又提供给了用户三个子按钮，包括：
+
+- 免费：只显示课程价格为免费的课程
+- 热门：显示课程热度最高的几门课程
+- 推荐：显示推荐的几门课程
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+#### 5.4.1.3 课程主页
+
+当用户点击其中的某一门课程，系统即会跳转到某门课详细的课程主页。
+
+以课程<最优化理论>为例，当我们点击最优化理论课程的图标后，系统跳转到最优化理论课程的主页。由于最优化理论是付费课程，所以在主页我们可以看到系统提示我们：
+
+- 购买课程：通过购买课程来获得该课程的观看权
+- VIP会员免费观看：通过充值VIP用户，在VIP有效期内，免费观看所有课程
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+当我们购买课程或充值VIP后，系统会显示该课程可以进行学习，同时显示该课程相关的详细信息。在课程主页的右上角，我们可以对课程进行收藏。
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+可以看到，系统通过四个子模块来显示该门课程的详细学习信息，包括：课程介绍、课程目录、课程评论和课程附件，如下所示。
+
+- 课程介绍：对最优化理论课程的详细介绍
+- 课程目录：显示该门课的所有章节信息，以及每个章节下的学习视频信息。
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+我们以其中的第一章：<凸集>来进行测试，我们点击<凸集>章节下的课程视频，即可对本章节的内容进行观看和学习。同时我们在该页面新增了视频评论子页面，实现了用户可以对每个视频进行自由的评论功能。
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+- 课程评论：显示所有用户对本门课程的评论，同时用户也可以发表自己对课程的评论
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+- 课程附件：显示本门课程所有的附件，例如教师所提供的书籍、PPT文件、作业文档等，同时显示每个附件的大小，和对应的下载功能。
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+### 5.4.2 教师端(管理员端)
+
+从主页面通过管理员端登入后，来到管理员端课程首页。
+
+在管理员端的左侧功能栏中包含以下七个主要功能板块：
 
 - 首页：跳转到AI课程首页，查看系统信息和用户信息。
 - 运营：可以选择公告、VIP会员、友情链接等功能。
@@ -320,9 +547,120 @@ todo
 - 微信公众号：可以选择消息回复、菜单功能。
 - 系统：可以选择配置、管理员、管理员角色等功能。
 
-todo
+#### 5.4.2.1 首页
 
-## 5.4 社区功能
+在首页显示了关于用户相关的信息和系统相关的信息两个方面：
+
+- 用户信息：包括新注册用户数、已支付订单数等等
+- 系统信息：包括后台版本、内核版本等等
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+#### 5.4.2.2 运营
+
+在运营主页面，其包含了多个不同功能的子页面，包括：
+
+- 公告：通过设置，发送给所有学习者用户一条公告
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+- VIP会员：管理者模式的盈利途径之一，管理员可以设置不同类型、时限的会员。充值会员的用户可以免费观看课程
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+- 友情链接、推广链接：管理员可以设置一些外部网站的跳转链接，比如有合作关系的广告合作商、或是相互引流的教育网站等等
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+- 首页推荐：可以手动设置哪些课程会被展示在用户端的推荐课程页面上
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+- 课程评论、视频评论：可以查看用户对课程、视频的评论，方便管理员对用户评论的内容是否合法进行审查
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+- 统计工具：在该子页面我们集成了一些数据统计工具，可以统计会员购买、课程购买、每日订单数、订单总额等等的趋势曲线、数据分析等。
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+#### 5.4.2.3 财务
+
+在财务页面，主要包含了以下三个子页面:
+
+- 订单列表：可以查看和管理用户所有的订单记录，对于每一条订单记录，其记录了ID、用户ID、用户名、订单号、总价等信息。同时支持通过查找用户ID或订单号来搜索定位到具体的订单记录上。
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+- 优惠码：管理员可以设置用户购买课程的优惠码，以及优惠码的使用次数、抵扣金额、使用限制等等。可以在定期的活动中分发给用户
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+- 邀请余额提现：可以查看用户邀请新用户的记录，以及对应的邀请提现余额
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+#### 5.4.2.4 用户
+
+在用户页面，可以管理所有的学习者注册用户。该子页面以列表的形式展示用户的全部信息，包括ID、昵称、手机号、注册时间等等，可以通过用户的昵称和手机号对用户记录进行搜索。管理员可以对用户所在的课程、用户的VIP等级进行管理，也可以对行为不规范的用户进行禁言或者封号。
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+#### 5.4.2.5 点播
+
+在点播页面，主要分为分类和课程两个子页面。
+
+在分类子页面，主要是对课程分类信息的相关管理。包括编辑现有的课程分类信息，新增新的课程分类信息等等。
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+在课程子页面，主要负责对所有课程进行管理。
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+在新添课程中，系统会指示管理者输入课程的名称、分类、价格、封面、简短介绍和相信介绍等信息。并将输入的记录按照具体格式保存在数据库中
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+对于任意一门课程，我们可以对它的章节、视频、附件和观看记录四个方面进行管理。
+
+- 章节：管理本门课程的章节信息(下图以最优化课程为例)
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+- 视频：为不同的章节插入对应的讲解视频。对于每个视频可以单独查看单个视频的销售记录、用户观看记录等等。
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+- 课程附件：管理者可以上传与本门课相关的附件，包括对应的书籍、PPT、作业文档等。
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+- 观看记录：查看和管理用户对本门课程的观看记录
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+#### 5.4.2.6 微信公众号
+
+在微信公众号页面，其集成了对微信公众号的自动化设置插件，可以对绑定的微信公众号进行自动化的管理和设置，包括：
+
+- 微信公众号消息回复：设置官方公众号的消息回复内容
+- 微信公众号内容管理：设置官方公众号的主页内容展示和同步
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+#### 5.4.2.7 系统
+
+在系统设置页面，可以完成对系统详细的配置设置，包括对系统、支付、会员等信息详细的设置，以下面的几个配置为例：
+
+- 系统：对系统的主页面URL链接，网站LOGO，ICP备案号等信息的设置
+- 短信：对短信服务商，短信签名的设置
+- 图片存储：图片的存储路径，访问链接
+- 支付：支付宝支付或微信支付的对接公钥私钥
+
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+
+## 5.5 社区功能
 
 从主系统页面选择AI学习社区功能后，系统会跳转到社区首页。
 
@@ -336,29 +674,29 @@ todo
 - 人脉：跳转到人脉页面，查看关注的所有博主、博客等信息
 - 通知：查看所有的通知信息，包括最近点赞信息、最近关注信息，关注的博主的发文信息
 
-### 5.4.1 首页
+### 5.5.1 首页
 
 在首页包含了系统推荐的话题，最近更新提问，最近热门提问，最新文章，最近热门文章等推荐信息。用户可以通过点击对应的文章或提问来进行查看。
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=N2U0OTM5ZTZhNDBkZDkzZDUyMjc5YTU1NmEwNzI1YjlfWjBISnNRSlpMVHRJZlBFaURJUU95ZTBpUkdKNTYyMlJfVG9rZW46Ym94Y25wcXRKTHdhUEJ2ZmJDNExMTGpMcE9oXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
-### 5.4.2 话题
+### 5.5.2 话题
 
 跳转到话题页面后，主要包含两个子板块，如下：
 
 - 已关注：只显示该用户所关注的话题
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=YWYyMWQyYWUxMzU5NWMwM2IxMDA3OGNjYmI5NmY2NDFfd0RYSllzMTFIR3pZYm5TVlQ3OER5RkpURzBmRmJyYU9fVG9rZW46Ym94Y25IZ2hXczBSZ2VTZlYzbGYwdFRVUVNWXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 - 精选：显示距今为止所有的话题
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=M2E5YmNjNWE4ODI1MGMxOWM0NTU4MzA3YjU5MzExY2FfMUlVS2JobHdPakNDNm40aG9kcEkxUndVUWRQbWRIcW1fVG9rZW46Ym94Y25YU2xlZ1BIYUFudXJrd1FhTzhCT1BmXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 我们点击其中的任一话题，系统会显示出该话题下所有的提问和文章信息。对选择的提问或文章进行点击即可查看该提问或文章的信息。
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDdkOGU5YjFmMmMxZDFmMTE5MzhjZWM4OWQzZjlhYzlfY2VhWEV0M3ZuQnZCcWhTdTJBd202YzNWTUtKd1dYbzNfVG9rZW46Ym94Y25BTmZqUTBwcHA0clgzY0ZsWHBaVUV1XzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
-### 5.4.3 问答
+### 5.5.3 问答
 
 跳转到问答页面后，主要包含三子板块，如下：
 
@@ -366,7 +704,7 @@ todo
 - 近期热门：显示近期最热门的提问（基于热度计算子程序实现）
 - 已关注：显示该用户已经关注的提问
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=Yzk2MzQ4ZTA5MWZiN2FjNjcyZDcxYjYzMDhkNTE5YzlfYWNsdFhtRXJwalFEeGM4eFk5RjRBQm44a1RjQ3NQVUtfVG9rZW46Ym94Y242SUs1azF6TEhxNkQxSnlKdVpTNWVmXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 我们点击其中的任一提问，系统会显示出该提问的详细信息，包括标题，具体内容，所在话题，发布时间等信息。初次之外，我们还提供了多种功能，如下：
 
@@ -376,7 +714,7 @@ todo
 
 其他用户或发起提问的用户可以在该提问下进行回答，进而形成良好的知识分享和知识解答AI学习社区。其他用户可以对该提问的评论进行点赞或点踩，系统会根据点赞量对热门评论进行置顶显示。同时对评论也实现了额外功能，包括举报评论等。
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWRhODRhNDBmOWFjNTkzNGFmMzExYTA3NmZmYjZmOTlfYkFhdlJJN1paOXNXQVIyWGhFVWV4azNYQThMMHdYSUdfVG9rZW46Ym94Y25WVlkxQUNMYXdvbWF6RkU2bEZQSFNmXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 点击提问或评论右侧的额外功能按钮，系统会显示出具体的额外功能。包括如下：
 
@@ -385,17 +723,17 @@ todo
 - 举报：举报该提问，系统审核员将对该举报进行人工审查
 - 查看本提问的所有关注者：帮助用户递归的进行学习
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=Zjk3MDZjOGExMjMyMTNlNDc4OWQwOGU4ZjkyNzBmZjZfN3VvNjU4cjBMY1ZsaldNc0tITmJIZ1FsTW5XVTF5THdfVG9rZW46Ym94Y244bG83cXE2dkxGQUMwMVpTZEx4ZWdkXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 下面展示额外功能中的举报功能，点击举报后，系统会弹出不同的举报理由，用户选择详细的举报理由进行举报后，系统审核员将对该举报进行人工审查。此功能是为了维护良好的社区学习环境，避免大量非学习、引战内容的渗入。
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDc1NzQ4OWM3ODE1NjVmOWY1Y2IwYzA5NjgyZTI0M2FfeGtvYndQQ3RORVJYSFFlY0hqRkVSOWR0YnN5a05GY0ZfVG9rZW46Ym94Y25HbUN6R3o2TGh4RDk4Y21BdW1RNTBzXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
  此外，用户可以点击右下角的发起提问按钮来发起提问。在新提问页面，用户输入提问的标题、所属的话题、提问的详细内容，即可发表新提问，显示在提问首页中。
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=YWFkNGFjNGM1ZWMyYTIzMGFhY2U3NTUwZDEyNmY2MzVfRDBWNGY3NkUwSm15NHJZSFphN0ZoeGdsN3ZWa1ZVYldfVG9rZW46Ym94Y25LVnNwcEZKT25IQzV6ZFE3STJEMjhlXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
-### 5.4.4 文章
+### 5.5.4 文章
 
 跳转到文章页面后，主要包含三子板块，如下：
 
@@ -403,27 +741,27 @@ todo
 - 近期热门：显示近期最热门的文章（基于热度计算子程序实现）
 - 已关注：显示该用户已经关注的文章
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=MTQ4MzQyNTk4MGUzOGQ2MTMxNTcxZmU1YjE3MTgwNzNfRE93S3c0dXN6cE9DR044TjlxbTdXSFl5SDlrN3ZKbERfVG9rZW46Ym94Y24xMUw0QWFEUU5ldTl6NlRWaHdodXhlXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 我们点击其中的任一文章，系统会显示出该文章的详细信息，包括标题，具体内容，所涉及话题，发布时间等信息。初次之外，我们还提供了多种功能，包括对文章点赞、对文章点踩、收藏文章、分享文章、举报文章等。
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=MTQ3ZDBlZDY2MDFiZTM5MDRmYjdlMDM1NWY5ZGRkMzVfQzJWcmRCV1prT280NEczV3hUc09MMGNwZVhHcWphUXBfVG9rZW46Ym94Y25uOFdaZ0NFQVJXeHliRjJiUG9QQjZnXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 文章支持多种格式的发布，包括任意插入图片，调整字体的颜色、大小、加粗等细节。
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=MDRlNmQ0OGE3NjU1N2I1NGM4ZTg4YTMyNjIyNzM2ZjNfaTh5eVFsVWpZcjBlTWdNeEI1UkxsNXJlbDhCN094T1VfVG9rZW46Ym94Y245Vk9JQUJ4aTJ0eUoweGlBNjRlTkFmXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 此外，用户可以点击右下角的发文章按钮来发起新文章。在新文章页面，用户输入文章的标题、所属的话题、文章的详细内容，即可发表新文章，显示在文章首页中。
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=NGUyNGEzMTQ3MTdhMjJlYTI2ZDQzN2RkNjVmYjI1MjBfM2RNQjZxZnIweGxVa1ZhYmZlZWtBVEd3R2d0VkpSY3dfVG9rZW46Ym94Y25JYThCRTVFQnFqbGU1cEFBTm13VFJMXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=MDAxMDY3NDJjYThjMzcyM2YzNDk3NGRmODZlYzhiNzNfZkxBNTJJUERTRUpxZXlSR2ZjMmRnaVFsUFh5UGRxZlJfVG9rZW46Ym94Y25Qc1psM25lakVwRjJoUTVNNFpYOUNkXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 另外用户可以在上方搜索栏根据标题模糊搜索文章或问答。
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2VkYTNhOTYxODY5NTA3YWE3NjQyNDk5ZDM5Zjg1YWZfcUluNGNOZDZEWlhLZXhBbUtEb3lmZVg4ZVhZOTNLSHJfVG9rZW46Ym94Y25GNVFvNHRnUGtKSzlKTWEydnJ5ME5iXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
-### 5.4.5 个人资料
+### 5.5.5 个人资料
 
 跳转到个人资料页面后，将会详细的显示个人信息，包括：
 
@@ -432,26 +770,26 @@ todo
 - 用户评论过的所有回答信息
 - 用户发表过的所有文章信息
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmU4ZjgwY2JhZjgyZjEwNWUzY2E1MDJhNTViYzM0ODlfdUlaTU1IWXA0SHMzMGlvdHVIMGVpTW03bm1yZnJSVW1fVG9rZW46Ym94Y25RSW9tQklKNXdxc1RMNE9BSVk2RnViXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
-### 5.4.6 人脉
+### 5.5.6 人脉
 
 跳转到人脉页面后，主要包含三子板块，如下：
 
 - 已关注：显示所有该用户关注的用户信息
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWJmMzI1YWZmMmU0MDVlNTU0YzFhNGJiMjgwOGUyZjlfR1lNUzhGZW56R0JkT0Y0V1cwMG9ZZ01NdVE4UUI3ZkRfVG9rZW46Ym94Y25pcWpyZHdWUGVFRklOelAzbHZMbWxlXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 - 关注者：显示关注该用户关注的用户信息
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=MGJmZTRjNjg5YWJkMjk2NmE1ZjFkMTZjNzE1OGYyZjVfbW9YU2J3VDNJckZFS1NiNTZWd3pQSVpWVzVEWllZTUZfVG9rZW46Ym94Y25UcDJGM1h5ZUpmTTdjeDFJaWpPWWlkXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
 - 找人：根据兴趣、关注方向等多维因素，推荐给用户具有类似兴趣的其他用户
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=OGI4ZWYyMTNkNTE5NzlkNjc5YTZjMjRkM2VkOGYzYWNfWGFnZ2NKbVdMQklpa002ZXZja1V1M0RtUEpNSkhKTE9fVG9rZW46Ym94Y253TFVNNUxncWR3eVFMc3FMbjJzN29mXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
 
-### 5.4.7 通知
+### 5.5.7 通知
 
 跳转到通知页面后，将会详细的显示所有的个人通知。
 
-![img](https://a9ehh4q3wr.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjI0MGIwZWMzNzJkZGQ0NDg3MjEyZGMyNTU3NDA4ZWRfb2NYcllGY0NHUDB2ZHF3ZVlPVll3b1BjbWE5dmFHcndfVG9rZW46Ym94Y25ISW1lcXl5OVNBb1Q2a285eGk5ZGplXzE2NTM2NDQ5NzM6MTY1MzY0ODU3M19WNA)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
