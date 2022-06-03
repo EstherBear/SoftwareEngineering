@@ -30,7 +30,7 @@
 
 系统功能结构图如下所示：
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725593.png)
 
 # 3 关键模块说明
 
@@ -56,19 +56,19 @@
 
 运行流程图如下：
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725584.png)
 
 ### 3.1.3 时序描述
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725603.png)
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725673.png)
 
 ### 3.1.4 接口描述
 
 登录模块连接前端以及数据治理模块，它接收来自前端的请求，简单的逻辑处理后，向数据治理模块发出对应的查询请求，得到结果后再经过简单的逻辑处理，把结果信息返回给前端。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725540.png)
 
 ### 3.1.5 附注
 
@@ -96,11 +96,13 @@ Pre. 判读请求数是否大于指定的阀值
 
 运行流程图如下：
 
-TODO
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725652.jpeg)
+
+
 
 ### 3.2.3 时序描述
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725433.png)
 
 
 
@@ -108,7 +110,7 @@ TODO
 
 前端界面模块连接用户以及除数据治理模块的其他所有模块，它接收来自用户的请求，向除数据治理模块的其他模块发出对应的请求，并接收返回结果再展示给用户。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725321.png)
 
 ### 3.2.5 附注
 
@@ -140,11 +142,11 @@ TODO
 
 运行流程图如下：
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725511.png)
 
 ### 3.3.3 时序描述
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725636.png)
 
 
 
@@ -152,7 +154,7 @@ TODO
 
 课程模块与前端模块、数据治理模块进行通信交互，相互查询和交换数据信息。此外，课程模块具备死锁检查子程序，进程调度子程序，进程池维护子程序，交互通信子程序，业务逻辑子程序等等，它们彼此的相互合作，完成了接收来自用户的操作请求，返回给用户相应的状态信息。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725335.png)
 
 ### 3.3.5 附注
 
@@ -176,11 +178,11 @@ TODO
 
 运行流程图如下：
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725408.png)
 
 ### 3.4.3 时序描述
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725132.png)
 
 
 
@@ -188,7 +190,7 @@ TODO
 
 评测模块接收来自前端的请求，简单的逻辑处理后，调用评测节点完成评测结果。根据评测结果，向数据治理模块发出对应的修改用户数据的请求。最后把评测分数返回给前端，并把游戏的动作序列发送给游戏引擎。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725126.png)
 
 ### 3.4.5 附注
 
@@ -222,13 +224,13 @@ TODO
 
 运行流程图如下：
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725714.png)
 
 ### 3.5.3 时序描述
 
 
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725880.png)
 
 
 
@@ -236,7 +238,7 @@ TODO
 
 社区模块与登录模块、前端模块、数据治理模块进行通信交互，相互查询和交换数据信息。在社区模块内部，它具备死锁检查子程序，进程调度子程序，进程池维护子程序，交互通信子程序，业务逻辑子程序等等，它们彼此的相互合作，完成了接收来自用户的操作请求，返回给用户相应的状态信息。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725215.png)
 
 ### 3.5.5 附注
 
@@ -260,11 +262,11 @@ TODO
 
 运行流程图如下：
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725303.png)
 
 ### 3.6.3 时序描述
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725575.png)
 
 
 
@@ -272,7 +274,7 @@ TODO
 
 数据治理模块连接所有其他模块以及数据库服务器，它接收来自其他模块的请求，向数据库发出对应的请求，进而数据库将对应的数据返回给其他模块。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725582.png)
 
 ### 3.6.5 附注
 
@@ -324,7 +326,7 @@ TODO
 
 评测模块后端的源代码组织如下：
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725444.png)
 
 其中：
 
@@ -381,23 +383,23 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 
 对于新用户，系统会要求进行用户注册。按照前端指引输入用户邮箱，并根据邮箱收到的邮件验证码来进行注册。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725169.png)
 
 ### 5.1.2 用户登录
 
 注册完毕后，用户可以通过输入账号密码来进行登录
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725087.png)
 
 ### 5.1.3 重置密码
 
 考虑到用户可能会忘记所设置的密码。通过点击登录页面的左下角按钮，选择“忘记密码”选项，即可进入到重置密码页面，按照注册用的邮箱来重置密码
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725048.png)
 
 
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725048.png)
 
 ## 5.2 主页面
 
@@ -407,7 +409,7 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 - 课程系统：Course
 - 社区功能：Community
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725180.png)
 
 ## 5.3 评测功能
 
@@ -415,7 +417,7 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 
 在评测首页，主页的上方的导航栏包含网站的名称、评测题目以及到我们网站其他部分(课程、社区)的链接。首页下部分包含网站logo和欢迎语句。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725180.png)
 
 导航栏一直悬停，点击网站名称可以返回首页。
 
@@ -423,11 +425,11 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 
 点击导航栏上的Problem按钮进入题目列表。目前我们只设置了一道题目。点击题目的ID或Title可以查看题目详情。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725433.png)
 
 题目详情中，包含了一段题目描述，除此之外，上方表格中指示了需要编写的文件的数量。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725593.png)
 
 点击sumbit按钮进入提交界面。
 
@@ -435,7 +437,7 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 
 提交界面包含了该题目中提供的代码，其中名称带锁形符号的python文件是不可编辑的，用户只能够编写并提交名称不带锁形符号的python文件。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725689.png)
 
 点击Submit按钮进行提交。
 
@@ -443,7 +445,7 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 
 代码评测结果将展示在提交页面的下部分。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725767.png)
 
 ## 5.4 课程功能
 
@@ -453,7 +455,7 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 
 在用户端课程首页，我们可以看到主页的左上角是我们项目的logo，主页的右上角是用户中心、用户的消息等信息，主页的上面包含了对课程的模糊搜索功能。在主页的下面则包含了不同的课程。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725910.png)
 
 #### 5.4.1.1 用户中心
 
@@ -461,23 +463,23 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 
 - 用户中心：显示用户的积分情况，充值情况，邀请新用户情况（邀请新用户可以获得代金券或一定的邀请余额）
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725127.png)
 
 - 我的资料：显示用户的详细信息，包括用户名、头像、姓名、身份证号等信息。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725096.png)
 
 - 录播课程：显示该用户的课程购买情况和购买记录，以及课程观看和收藏记录。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725354.png)
 
 - 我的订单、我的消息：反馈了用户的订单记录、消息记录。当没有订单记录和消息记录时，系统会显示为空。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725560.png)
 
 - 我的邀请、积分明细：为了进一步增大对项目的推广，我们提出了邀请机制。用户可以凭借自己的邀请码来邀请新用户注册系统，来获得一定的邀请金额、代金券和积分，它们可以用来在购买课程时进行打折或抵消一部分价格。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725484.png)
 
 #### 5.4.1.2 课程中心
 
@@ -485,11 +487,11 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 
 - 全部：显示所有的课程信息
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725523.png)
 
 - 单独类别：只显示属于某个单独类别的课程信息。例如在Artificial Intelligence类别下：
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725938.png)
 
 在选择了某一个类别进行显示后，我们又提供给了用户三个子按钮，包括：
 
@@ -497,7 +499,7 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 - 热门：显示课程热度最高的几门课程
 - 推荐：显示推荐的几门课程
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725802.png)
 
 #### 5.4.1.3 课程主页
 
@@ -508,30 +510,30 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 - 购买课程：通过购买课程来获得该课程的观看权
 - VIP会员免费观看：通过充值VIP用户，在VIP有效期内，免费观看所有课程
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725846.png)
 
 当我们购买课程或充值VIP后，系统会显示该课程可以进行学习，同时显示该课程相关的详细信息。在课程主页的右上角，我们可以对课程进行收藏。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725860.png)
 
 可以看到，系统通过四个子模块来显示该门课程的详细学习信息，包括：课程介绍、课程目录、课程评论和课程附件，如下所示。
 
 - 课程介绍：对最优化理论课程的详细介绍
 - 课程目录：显示该门课的所有章节信息，以及每个章节下的学习视频信息。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725274.png)
 
 我们以其中的第一章：<凸集>来进行测试，我们点击<凸集>章节下的课程视频，即可对本章节的内容进行观看和学习。同时我们在该页面新增了视频评论子页面，实现了用户可以对每个视频进行自由的评论功能。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725120.png)
 
 - 课程评论：显示所有用户对本门课程的评论，同时用户也可以发表自己对课程的评论
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725097.png)
 
 - 课程附件：显示本门课程所有的附件，例如教师所提供的书籍、PPT文件、作业文档等，同时显示每个附件的大小，和对应的下载功能。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725078.png)
 
 ### 5.4.2 教师端(管理员端)
 
@@ -554,7 +556,7 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 - 用户信息：包括新注册用户数、已支付订单数等等
 - 系统信息：包括后台版本、内核版本等等
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725763.png)
 
 #### 5.4.2.2 运营
 
@@ -562,27 +564,27 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 
 - 公告：通过设置，发送给所有学习者用户一条公告
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725979.png)
 
 - VIP会员：管理者模式的盈利途径之一，管理员可以设置不同类型、时限的会员。充值会员的用户可以免费观看课程
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725013.png)
 
 - 友情链接、推广链接：管理员可以设置一些外部网站的跳转链接，比如有合作关系的广告合作商、或是相互引流的教育网站等等
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725006.png)
 
 - 首页推荐：可以手动设置哪些课程会被展示在用户端的推荐课程页面上
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725118.png)
 
 - 课程评论、视频评论：可以查看用户对课程、视频的评论，方便管理员对用户评论的内容是否合法进行审查
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725604.png)
 
 - 统计工具：在该子页面我们集成了一些数据统计工具，可以统计会员购买、课程购买、每日订单数、订单总额等等的趋势曲线、数据分析等。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725607.png)
 
 #### 5.4.2.3 财务
 
@@ -590,21 +592,21 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 
 - 订单列表：可以查看和管理用户所有的订单记录，对于每一条订单记录，其记录了ID、用户ID、用户名、订单号、总价等信息。同时支持通过查找用户ID或订单号来搜索定位到具体的订单记录上。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725748.png)
 
 - 优惠码：管理员可以设置用户购买课程的优惠码，以及优惠码的使用次数、抵扣金额、使用限制等等。可以在定期的活动中分发给用户
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725802.png)
 
 - 邀请余额提现：可以查看用户邀请新用户的记录，以及对应的邀请提现余额
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725811.png)
 
 #### 5.4.2.4 用户
 
 在用户页面，可以管理所有的学习者注册用户。该子页面以列表的形式展示用户的全部信息，包括ID、昵称、手机号、注册时间等等，可以通过用户的昵称和手机号对用户记录进行搜索。管理员可以对用户所在的课程、用户的VIP等级进行管理，也可以对行为不规范的用户进行禁言或者封号。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725815.png)
 
 #### 5.4.2.5 点播
 
@@ -612,33 +614,33 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 
 在分类子页面，主要是对课程分类信息的相关管理。包括编辑现有的课程分类信息，新增新的课程分类信息等等。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725328.png)
 
 在课程子页面，主要负责对所有课程进行管理。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725385.png)
 
 在新添课程中，系统会指示管理者输入课程的名称、分类、价格、封面、简短介绍和相信介绍等信息。并将输入的记录按照具体格式保存在数据库中
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725950.png)
 
 对于任意一门课程，我们可以对它的章节、视频、附件和观看记录四个方面进行管理。
 
 - 章节：管理本门课程的章节信息(下图以最优化课程为例)
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725815.png)
 
 - 视频：为不同的章节插入对应的讲解视频。对于每个视频可以单独查看单个视频的销售记录、用户观看记录等等。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725655.png)
 
 - 课程附件：管理者可以上传与本门课相关的附件，包括对应的书籍、PPT、作业文档等。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725637.png)
 
 - 观看记录：查看和管理用户对本门课程的观看记录
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725121.png)
 
 #### 5.4.2.6 微信公众号
 
@@ -647,7 +649,7 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 - 微信公众号消息回复：设置官方公众号的消息回复内容
 - 微信公众号内容管理：设置官方公众号的主页内容展示和同步
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725162.png)
 
 #### 5.4.2.7 系统
 
@@ -658,7 +660,7 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 - 图片存储：图片的存储路径，访问链接
 - 支付：支付宝支付或微信支付的对接公钥私钥
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725548.png)
 
 ## 5.5 社区功能
 
@@ -678,7 +680,7 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 
 在首页包含了系统推荐的话题，最近更新提问，最近热门提问，最新文章，最近热门文章等推荐信息。用户可以通过点击对应的文章或提问来进行查看。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725446.png)
 
 ### 5.5.2 话题
 
@@ -686,15 +688,15 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 
 - 已关注：只显示该用户所关注的话题
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725723.png)
 
 - 精选：显示距今为止所有的话题
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725580.png)
 
 我们点击其中的任一话题，系统会显示出该话题下所有的提问和文章信息。对选择的提问或文章进行点击即可查看该提问或文章的信息。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725857.png)
 
 ### 5.5.3 问答
 
@@ -704,7 +706,7 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 - 近期热门：显示近期最热门的提问（基于热度计算子程序实现）
 - 已关注：显示该用户已经关注的提问
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725167.png)
 
 我们点击其中的任一提问，系统会显示出该提问的详细信息，包括标题，具体内容，所在话题，发布时间等信息。初次之外，我们还提供了多种功能，如下：
 
@@ -714,7 +716,7 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 
 其他用户或发起提问的用户可以在该提问下进行回答，进而形成良好的知识分享和知识解答AI学习社区。其他用户可以对该提问的评论进行点赞或点踩，系统会根据点赞量对热门评论进行置顶显示。同时对评论也实现了额外功能，包括举报评论等。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725317.png)
 
 点击提问或评论右侧的额外功能按钮，系统会显示出具体的额外功能。包括如下：
 
@@ -723,15 +725,15 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 - 举报：举报该提问，系统审核员将对该举报进行人工审查
 - 查看本提问的所有关注者：帮助用户递归的进行学习
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725954.png)
 
 下面展示额外功能中的举报功能，点击举报后，系统会弹出不同的举报理由，用户选择详细的举报理由进行举报后，系统审核员将对该举报进行人工审查。此功能是为了维护良好的社区学习环境，避免大量非学习、引战内容的渗入。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725687.png)
 
  此外，用户可以点击右下角的发起提问按钮来发起提问。在新提问页面，用户输入提问的标题、所属的话题、提问的详细内容，即可发表新提问，显示在提问首页中。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725646.png)
 
 ### 5.5.4 文章
 
@@ -741,25 +743,25 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 - 近期热门：显示近期最热门的文章（基于热度计算子程序实现）
 - 已关注：显示该用户已经关注的文章
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725899.png)
 
 我们点击其中的任一文章，系统会显示出该文章的详细信息，包括标题，具体内容，所涉及话题，发布时间等信息。初次之外，我们还提供了多种功能，包括对文章点赞、对文章点踩、收藏文章、分享文章、举报文章等。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725170.png)
 
 文章支持多种格式的发布，包括任意插入图片，调整字体的颜色、大小、加粗等细节。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725587.png)
 
 此外，用户可以点击右下角的发文章按钮来发起新文章。在新文章页面，用户输入文章的标题、所属的话题、文章的详细内容，即可发表新文章，显示在文章首页中。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725526.png)
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725497.png)
 
 另外用户可以在上方搜索栏根据标题模糊搜索文章或问答。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725769.png)
 
 ### 5.5.5 个人资料
 
@@ -770,7 +772,7 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 - 用户评论过的所有回答信息
 - 用户发表过的所有文章信息
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725920.png)
 
 ### 5.5.6 人脉
 
@@ -778,18 +780,18 @@ Rest API 的调用方式为：Base URL + 接口名字，如：`oj.skywatch.top/a
 
 - 已关注：显示所有该用户关注的用户信息
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725933.png)
 
 - 关注者：显示关注该用户关注的用户信息
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725265.png)
 
 - 找人：根据兴趣、关注方向等多维因素，推荐给用户具有类似兴趣的其他用户
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725442.png)
 
 ### 5.5.7 通知
 
 跳转到通知页面后，将会详细的显示所有的个人通知。
 
-![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/asynccode)
+![img](https://typora-1304243409.cos.ap-guangzhou.myqcloud.com/SoftwareEngineering/lab15/202206031725406.png)
